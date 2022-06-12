@@ -1,0 +1,162 @@
+object mainFrame: TmainFrame
+  Left = 356
+  Height = 603
+  Top = 229
+  Width = 1193
+  Caption = 'Programa PDI'
+  ClientHeight = 578
+  ClientWidth = 1193
+  DesignTimePPI = 120
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object Image1: TImage
+    Left = 64
+    Height = 240
+    Top = 64
+    Width = 320
+    OnClick = Image1Click
+    OnMouseMove = Image1MouseMove
+  end
+  object Image2: TImage
+    Left = 504
+    Height = 240
+    Top = 64
+    Width = 320
+    OnClick = Image1Click
+  end
+  object Button1: TButton
+    Left = 400
+    Height = 30
+    Top = 160
+    Width = 94
+    Caption = '<=='
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -20
+    Font.Name = 'Segoe UI Black'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Image3: TImage
+    Left = 64
+    Height = 240
+    Top = 336
+    Width = 320
+    OnClick = Image1Click
+  end
+  object Image4: TImage
+    Left = 504
+    Height = 240
+    Top = 336
+    Width = 320
+    OnClick = Image1Click
+  end
+  object Image5: TImage
+    Left = 392
+    Height = 88
+    Top = 64
+    Width = 104
+    OnClick = Image1Click
+  end
+  object Edit1: TEdit
+    Left = 432
+    Height = 28
+    Top = 200
+    Width = 60
+    OnChange = Edit1Change
+    TabOrder = 1
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 432
+    Height = 28
+    Top = 234
+    Width = 60
+    TabOrder = 2
+    Text = 'Edit2'
+  end
+  object Label1: TLabel
+    Left = 401
+    Height = 20
+    Top = 242
+    Width = 8
+    Caption = 'Y'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 400
+    Height = 20
+    Top = 208
+    Width = 9
+    Caption = 'X'
+    ParentColor = False
+    OnClick = Label2Click
+  end
+  object MainMenu1: TMainMenu
+    Left = 896
+    Top = 64
+    object MenuItemArquivo: TMenuItem
+      Caption = 'Arquivo'
+      object MenuItemAbrir: TMenuItem
+        Caption = '&Abrir'
+        OnClick = MenuItemAbrirClick
+      end
+      object MenuItemSalvar: TMenuItem
+        Caption = '&Salvar'
+        OnClick = MenuItemSalvarClick
+      end
+      object MenuItemSair: TMenuItem
+        Caption = 'Sai&r'
+        OnClick = MenuItemSairClick
+      end
+    end
+    object MenuOperacoes: TMenuItem
+      Caption = 'Operações'
+      OnClick = MenuOperacoesClick
+      object MenuItemParaCinza: TMenuItem
+        Caption = 'Converte para Cinza'
+        OnClick = MenuItemParaCinzaClick
+      end
+      object MenuItemInverteCinza: TMenuItem
+        Caption = 'MenuItemInverteCinza'
+        OnClick = MenuItemInverteCinzaClick
+      end
+      object MenuItemInverteColorida: TMenuItem
+        Caption = 'Inverte Colorida'
+        OnClick = MenuItemInverteColoridaClick
+      end
+      object MenuItemSepararCanais: TMenuItem
+        Caption = 'Separar Canais'
+        OnClick = MenuItemSepararCanaisClick
+      end
+      object MenuItemEqualizacao: TMenuItem
+        Caption = 'Equalização'
+        OnClick = MenuItemEqualizacaoClick
+      end
+      object MenuItemSaltSpice: TMenuItem
+        Caption = 'SaltSpice'
+        OnClick = MenuItemSaltSpiceClick
+      end
+    end
+    object MenuItem1: TMenuItem
+      Caption = 'Filtro'
+      object MenuItemMedia: TMenuItem
+        Caption = 'Média'
+        OnClick = MenuItemMediaClick
+      end
+    end
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 896
+    Top = 136
+  end
+  object SaveDialog1: TSaveDialog
+    Left = 896
+    Top = 216
+  end
+end
